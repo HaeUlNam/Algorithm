@@ -4,9 +4,10 @@
 #include<iostream>
 using namespace std;
 
-int arr[20];
+int arr[12];
+int aaa[6];
 int k;
-void recur(int * aaa, int cur, int count)
+void recur(int cur, int count)
 {
     if(cur > k) return;
     // cout << cur << " ";   
@@ -21,9 +22,9 @@ void recur(int * aaa, int cur, int count)
     }
 
     aaa[count] = arr[cur];
-    recur(aaa, cur + 1, count + 1);
+    recur(cur + 1, count + 1);
     aaa[count] = 0;
-    recur(aaa, cur + 1, count);
+    recur(cur + 1, count);
 }
 
 int main()
@@ -36,13 +37,9 @@ int main()
         for(int x = 0; x < k ; x++)
             cin >> arr[x];
 
-        int aaa[20];
-        recur(aaa, 0, 0);
+        int aaa[6];
+        recur(0, 0);
         cout << endl;
-
-        //init
-        for(int i = 0; i < 20; i++)
-            arr[i] = 0;
     }
     return 0;
 }
