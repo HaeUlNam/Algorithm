@@ -25,6 +25,8 @@
         ** the value of distance is smaller when Y moves first.
 */
 
+/* TODO: Using Dynamic Programming */
+
 #include<iostream>
 #include<climits>
 #include<algorithm>
