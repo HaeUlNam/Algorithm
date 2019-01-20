@@ -5,13 +5,13 @@
 - sort 사용할 때, 내림차순
 
 - priority_queue  사용할 때, 오름차순
-
+<br><br>
 ### 오류가 났을 때, 확인할 것
 - 자료형 크기 : long long을 사용해야 하는지 확인.
-
+<br><br>
 ### map이 2차원이라고, visit도 항상 2차원이어야 한다는 생각 버리자.
 -> 상황에 따라서, 3차원, 4차원으로 풀 수도 있다.
-
+<br><br>
 ### 자릿수를 셀 때 주의할 점.
 -> 0은 아래와 같이 자릿수를 셀 때, 한 자리인지 계산하지 못한다.
 
@@ -45,10 +45,10 @@ bool checkNum(int & count, const int num)
     return true;
 }
 ```
-
+<br><br>
 ### STL Vector 사용법
 - 생성자로 Vector size을 만들고 시작하려면 아래와 같이 한다.
-<br><br>
+
 1. 1차원 배열 할당
 ```cpp
 vector<info> vec(3);
@@ -56,7 +56,6 @@ vector<info> vec(3);
 |  <center>vec[0]</center> |  <center>vec[1]</center> |  <center>vec[2]</center> |
 |:--------|:--------:|--------:|  
   
-<br><br>
 2. 2차원 배열 시작점 할당
 
 ```cpp
