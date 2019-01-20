@@ -15,7 +15,7 @@
 ### 자릿수를 셀 때 주의할 점.
 -> 0은 아래와 같이 자릿수를 셀 때, 한 자리인지 계산하지 못한다.
 
-```
+```cpp
 bool checkNum(int & count, const int num)
 {
     int tmp = num;
