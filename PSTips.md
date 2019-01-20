@@ -45,3 +45,29 @@ bool checkNum(int & count, const int num)
     return true;
 }
 ```
+
+### STL Vector 사용법
+- 생성자로 Vector size을 만들고 시작하려면 아래와 같이 한다.
+<br><br>
+1. 1차원 배열 할당
+```cpp
+vector<info> vec(3);
+```
+|  <center>vec[0]</center> |  <center>vec[1]</center> |  <center>vec[2]</center> |
+|:--------|:--------:|--------:|  
+  
+<br><br>
+2. 2차원 배열 시작점 할당
+
+```cpp
+vector<info> vec[3]; 
+```
+-> 이는 인접 리스트와 같은 구조를 만들어 준다.
+-> 현재 공간은 할당되어있지 않다.
+
+```cpp
+vec[0].push_back(); 
+```
+-> 위와 같이 해주게 되면, 하나의 공간이 할당된다.  
+
+| vec[0][0] |<br>
