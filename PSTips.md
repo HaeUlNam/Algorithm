@@ -69,4 +69,15 @@ vec[0].push_back();
 ```
 -> 위와 같이 해주게 되면, 하나의 공간이 할당된다.  
 
-| vec[0][0] |<br>
+| vec[0][0] |
+
+<br><br>
+
+### Char형 NULL
+-> '\0'
+
+<br>
+
+### # include < stdlib.h  > 에서 필요한 함수
+* atoi : String to Integer
+* abs  : 절댓값 가져오기
