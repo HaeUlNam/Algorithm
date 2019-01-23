@@ -55,8 +55,13 @@ vector<info> vec(3);
 ```
 |  <center>vec[0]</center> |  <center>vec[1]</center> |  <center>vec[2]</center> |
 |:--------|:--------:|--------:|  
-  
-2. 2차원 배열 시작점 할당
+
+```cpp
+vector<int> vec = {1,2,3,4};
+```
+-> 위와 같이 하면, 4개 크기에 각각 숫자로 초기화된다.
+
+2. 2차원 배열 할당
 
 ```cpp
 vector<info> vec[3]; 
@@ -71,6 +76,11 @@ vec[0].push_back();
 
 | vec[0][0] |
 
+```cpp
+vector<vector<int>> cctv_start = { {}, {0}, {0,2}, {0,3}, {0,2,3}, {0,1,2,3}};
+```
+-> 이렇게 하면, 해당하는 숫자 개수만큼 만들어진다.
+
 <br><br>
 
 ### Char형 NULL
@@ -81,3 +91,9 @@ vec[0].push_back();
 ### # include < stdlib.h  > 에서 필요한 함수
 * atoi : String to Integer
 * abs  : 절댓값 가져오기
+
+### Visit함수
+-> copy Visit함수를 통해, 백트래킹 진행할 때 표시를 copy visit에 잘했는지 확인하자.(많이 실수하는 요인 중 하나다.)
+
+### 방향 숫자
+-> 방향이 4방향일 때, +1씩 방향을 바꾼다면 %4를 통해 넘어가지 않도록 관리하자.
