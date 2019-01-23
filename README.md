@@ -65,6 +65,10 @@ Data Structure & Algorithm implementation
     * Quick Sort
     * Merge Sort
     * Heap Sort
+    * Intro Sort
+    
+        -> 참고 : https://stackoverflow.com/questions/11175478/when-does-introsort-shift-from-quicksort-to-heapsort
+        https://stackoverflow.com/questions/1933759/when-is-each-sorting-algorithm-used
 
 * Hashing
 
