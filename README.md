@@ -59,15 +59,15 @@ Data Structure & Algorithm implementation
     * Floyd's Algorithm 
 
 * Sorting
-    * Bubble Sort
-    * Selection Sort
+    * Bubble Sort 
+    * Selection Sort 
     * Insertion Sort
     * Quick Sort
     * Merge Sort
     * Heap Sort
     * Intro Sort
     
-        -> 참고 : https://stackoverflow.com/questions/11175478/when-does-introsort-shift-from-quicksort-to-heapsort
+        -> 참고 : https://stackoverflow.com/questions/11175478/when-does-introsort-shift-from-quicksort-to-heapsort <br>
         https://stackoverflow.com/questions/1933759/when-is-each-sorting-algorithm-used
 
 * Hashing
@@ -95,7 +95,8 @@ Data Structure & Algorithm implementation
     * Matrix Multiplication
     * Strassen's algorithm
     * Quick sort (위에 sorting과 겹치게 된다.)
-    * Randomized quicksort
+    * Randomized quicksort (randomized algorithm의 이해가 필요)
+    (참고: https://ko.wikipedia.org/wiki/%ED%99%95%EB%A5%A0%EC%A0%81_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
 
 * Sorting Lower Bounds
     * Decision trees
