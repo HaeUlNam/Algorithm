@@ -50,7 +50,7 @@ public:
             Top = arr[SSize];
         }
         else
-            cout << "There is no data in Stack" << endl;
+            cout << "There is no data in Stack(Underflow)" << endl;
     }
 
     T top()

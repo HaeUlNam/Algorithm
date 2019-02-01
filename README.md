@@ -18,7 +18,7 @@ Data Structure & Algorithm
 
 * 포스팅 계획 : [블로그] ( )
 
-* stack : [블로그]() / [코드](https://github.com/HaeUlNam/Algorithm/tree/master/DataStructure_Algorithm_implementation/0.Stack)
+* stack : [블로그](https://haeulnam.github.io/algorithm/2019/02/01/05-Stack/) / [코드](https://github.com/HaeUlNam/Algorithm/tree/master/DataStructure_Algorithm_implementation/0.Stack)
 * queue
 * deque
 * Linked List
