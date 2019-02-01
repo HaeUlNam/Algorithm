@@ -9,54 +9,46 @@ Problem Solving
 
 <br>
 
-Data Structure & Algorithm implementation
----------------- 
-### Data Structure
+Data Structure & Algorithm
+* 왜 자료 구조, 알고리즘을 배워야 할까? / [블로그](https://haeulnam.github.io/algorithm/2018/01/26/Implementation-Schedule/)
 
+* 알고리즘 테스트로 뽑으려는 회사는? / [블로그](https://haeulnam.github.io/algorithm/2019/02/01/%EC%86%8C%EA%B0%9C-2/)
+
+* 대학생이 참여할 수 있는 알고리즘 대회 / [블로그](https://haeulnam.github.io/algorithm/2019/02/01/%EC%86%8C%EA%B0%9C-3/)
 
 * Linear Data Structure
     * stack
-    
     * queue
-
     * deque
-
     * Linked List
         * Single Linked List
         * Double Linked List
         * Circular Linked List
 
-* Tree (Basic)
+* Hash Table
 
-* BST(Binary Search Tree)
+* Tree
+    * Basic Concept of Tree
+    * BST(Binary Search Tree)
+    * Max Heap & Max Priority Queue
+    * MST(Minimum Spanning Tree)
+        * Prim's method
+        * Kruskal's method
+    * Selection Tree
+    * AVL Tree
+    * B+ Tree
+    * Segment Tree
 
-* Heap
-    * Max Heap
-    * Max Priority Queue
-
-* Selection Tree
-
-* AVL Tree
-
-* B+ Tree
-
-* Segment Tree
-
-* Graph (Basic)
-    * Vertex, Edge
-    * Adjacency-matrix, Adjacency-list
+* Graph
+    * Basic Concept of Graph
     * Tree Traversal
-
-* Disjoint Set
-
-* MST(Minimum Spanning Tree)
-    * Kruskal's method
-    * Prim's method
 
 * Shortest Path (Algorithm 강의자료도 참고해서 구현)
     * Dijkstra's algorithm (추가적으로 BFS)
     * Bellman-ford's algorithm
     * Floyd's Algorithm 
+
+* Disjoint Set
 
 * Sorting
     * Bubble Sort 
@@ -65,12 +57,10 @@ Data Structure & Algorithm implementation
     * Quick Sort
     * Merge Sort
     * Heap Sort
-    * Intro Sort
-    
-        -> 참고 : https://stackoverflow.com/questions/11175478/when-does-introsort-shift-from-quicksort-to-heapsort <br>
-        https://stackoverflow.com/questions/1933759/when-is-each-sorting-algorithm-used
 
-* Hashing
+    * Linear-Time Sorting
+        * Counting sort
+        * Radix sort
 
 ### Algorithm
 
@@ -100,10 +90,6 @@ Data Structure & Algorithm implementation
 
 * Sorting Lower Bounds
     * Decision trees
-
-* Linear-Time Sorting
-    * Counting sort
-    * Radix sort
 
 * Dynamic Programming
     * LCS(Longest Common Sequence)
@@ -149,7 +135,6 @@ Data Structure & Algorithm implementation
 
 * 문자열 검색 알고리즘
     * KMP(Knuth–Morris–Pratt)
-
     * Suffix Array(접미사 배열)
 
 * NetWork Flow (네트워크 유량)
@@ -157,21 +142,13 @@ Data Structure & Algorithm implementation
 ### C++ STL(Standard Template Library) 설명
 
 * vector
-
 * stack
-
 * queue
-
 * deque
-
 * map - Red Black Tree
-
 * set
-
 * priority_queue
-
 * sort
-
 * greater, less - sort와 priority queue 다른 점 비교
 
 ### Reference
@@ -187,6 +164,10 @@ Data Structure & Algorithm implementation
     * THOMAS H.CORMEN, CHARLES E. LEISERSO,N RONALD L.RIVEST, & CLIFFORD STEIN (2009) Introduction to algorithm
     
     * 구종만 지음, 인사이트 (2014) 프로그래밍 대회에서 배우는 알고리즘 문제 해결 전략
+
+* Github
+    * jwasham's [coding-interview-university](https://github.com/jwasham/coding-interview-university/blob/master/translations/README-ko.md)
+
 
 * Youtube
 
