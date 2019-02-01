@@ -10,20 +10,21 @@ Problem Solving
 <br>
 
 Data Structure & Algorithm
-* 왜 자료 구조, 알고리즘을 배워야 할까? / [블로그](https://haeulnam.github.io/algorithm/2018/01/26/Implementation-Schedule/)
+* 왜 자료 구조, 알고리즘을 배워야 할까? : [블로그](https://haeulnam.github.io/algorithm/2018/01/26/Implementation-Schedule/)
 
-* 알고리즘 테스트로 뽑으려는 회사는? / [블로그](https://haeulnam.github.io/algorithm/2019/02/01/%EC%86%8C%EA%B0%9C-2/)
+* 알고리즘 테스트로 뽑으려는 회사는? : [블로그](https://haeulnam.github.io/algorithm/2019/02/01/%EC%86%8C%EA%B0%9C-2/)
 
-* 대학생이 참여할 수 있는 알고리즘 대회 / [블로그](https://haeulnam.github.io/algorithm/2019/02/01/%EC%86%8C%EA%B0%9C-3/)
+* 대학생이 참여할 수 있는 알고리즘 대회 : [블로그](https://haeulnam.github.io/algorithm/2019/02/01/%EC%86%8C%EA%B0%9C-3/)
 
-* Linear Data Structure
-    * stack
-    * queue
-    * deque
-    * Linked List
-        * Single Linked List
-        * Double Linked List
-        * Circular Linked List
+* 포스팅 계획 : [블로그] ( )
+
+* stack : [블로그]() / [코드](https://github.com/HaeUlNam/Algorithm/tree/master/DataStructure_Algorithm_implementation/0.Stack)
+* queue
+* deque
+* Linked List
+    * Single Linked List
+    * Double Linked List
+    * Circular Linked List
 
 * Hash Table
 
@@ -57,7 +58,6 @@ Data Structure & Algorithm
     * Quick Sort
     * Merge Sort
     * Heap Sort
-
     * Linear-Time Sorting
         * Counting sort
         * Radix sort
