@@ -12,8 +12,6 @@ void MergeSort(int start, int end)
     //T(1) return
     if(start >= end) return; 
 
-    //cout << start << "/" << end << endl;
-
     int middle = (start + end) / 2;
 
     //반반 split
