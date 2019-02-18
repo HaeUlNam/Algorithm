@@ -16,7 +16,7 @@ Data Structure & Algorithm
 
 * 대학생이 참여할 수 있는 알고리즘 대회 : [블로그](https://haeulnam.github.io/algorithm/2019/02/01/%EC%86%8C%EA%B0%9C-3/)
 
-* 포스팅 계획 : [블로그] (https://haeulnam.github.io/algorithm/2019/02/01/04-%ED%8F%AC%EC%8A%A4%ED%8C%85-%EA%B3%84%ED%9A%8D/)
+* 포스팅 계획 : [블로그](https://haeulnam.github.io/algorithm/2019/02/01/04-%ED%8F%AC%EC%8A%A4%ED%8C%85-%EA%B3%84%ED%9A%8D/)
 
 * stack : [블로그](https://haeulnam.github.io/algorithm/2019/02/01/05-Stack/) / [코드](https://github.com/HaeUlNam/Algorithm/tree/master/DataStructure_Algorithm_implementation/0.Stack)
 * queue
