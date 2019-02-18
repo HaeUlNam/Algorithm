@@ -56,7 +56,7 @@ Data Structure & Algorithm
     * Selection Sort 
     * Insertion Sort
     * Quick Sort
-    * Merge Sort : [블로그](https://haeulnam.github.io/algorithm/2019/02/01/06-MergeSort/) [코드](https://github.com/HaeUlNam/Algorithm/tree/master/DataStructure_Algorithm_implementation/Sorting/MergeSort)
+    * Merge Sort : [블로그](https://haeulnam.github.io/algorithm/2019/02/01/06-MergeSort/) / [코드](https://github.com/HaeUlNam/Algorithm/tree/master/DataStructure_Algorithm_implementation/Sorting/MergeSort)
     * Heap Sort
     * Linear-Time Sorting
         * Counting sort
