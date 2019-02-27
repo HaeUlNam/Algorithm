@@ -12,15 +12,13 @@ struct info{
 class Node{
 public:
     Node * next;
-    char number[64];
+    info data;
 
-    Node(char number[64])
+    Node(info aa)
     {
         next = 0;
 
-        for(int i = 0; i < 64; i++)
-            this->number[i] = number[i];
-        
+        this-> data = aa;
     }
 };
 
@@ -50,14 +48,14 @@ int getHashcode(char * str)
     return (key % MAX_TABLE);
 }
 
-//추가
+//번호 추가
 void add(info input)
 {
     int key = getHashcode(input.name);
 
     if(table[key] == 0)
     {
-        table[key] = new Node(input.number);
+        table[key] = new Node(input);
     }
     else
     {
@@ -66,7 +64,7 @@ void add(info input)
         while(cur->next != 0)
             cur = cur->next;
 
-        cur->next = new Node(input.number);
+        cur->next = new Node(input);
     }
 }
 
@@ -85,7 +83,7 @@ int strcamp(char * a, char * b)
     return a[i] - b[j];
 }
 
-//삭제
+//사람에 해당하는 번호 삭제
 void erase(info input)
 {
     int key = getHashcode(input.name);
@@ -95,7 +93,7 @@ void erase(info input)
 
     while(cur != 0)
     {
-        if(strcamp(input.number, cur->number) == 0)
+        if(strcamp(input.name, cur->data.name) == 0)
         {
             if(cur == prev)
             {
@@ -118,6 +116,36 @@ void erase(info input)
         cout << "There is no data : " << input.name << '\n';
 }
 
+//특정 사람의 번호 찾기
+void search(info input)
+{
+    int key = getHashcode(input.name);
+
+    Node * prev = table[key];
+    Node * cur  = table[key];
+
+    bool check = false;
+    info result;
+
+    while(cur != 0)
+    {
+        if(strcamp(input.name, cur->data.name) == 0)
+        {
+            check = true;
+            result = cur->data;
+            break;
+        }
+
+        prev = cur;
+        cur  = cur->next;
+    }
+
+    if(!check)
+        cout << "There is no data : " << input.name << '\n';
+    else
+        cout << result.name << " :" << result.number << "\n";
+}
+
 void print()
 {
     cout << "-----------------------------------------------" << '\n';
@@ -128,8 +156,11 @@ void print()
 
         while(cur != 0)
         {
-            for(int j = 0; cur->number[j] != 0; j++)
-                cout << cur->number[j];
+            for(int j = 0; cur->data.name[j] != 0; j++)
+                cout << cur->data.name[j];
+            cout << ": ";
+            for(int j = 0; cur->data.number[j] != 0; j++)
+                cout << cur->data.number[j];
             cout << " | ";
             cur = cur->next;
         }
@@ -142,22 +173,25 @@ int main()
 {
     init();
 
-    add({"남해울", "010-8791-2439"});
-    add({"남해울", "010-8811-2488"});
-    add({"남해울", "010-8111-2487"});
-    add({"남해울", "010-8411-2485"});
+    add({"영등포", "010-8791-2439"});
+    add({"황해해", "010-8411-2488"});
+    add({"울울울", "010-8111-2487"});
+    add({"유유융", "010-8411-2485"});
 
-    add({"문의성", "010-1234-1241"});
+    add({"이의무", "010-1234-1241"});
 
     print();
 
-    erase({"문의숭", "010-1234-1240"});
+    erase({"이의무", "010-1234-1241"});
     
     print();
 
-    erase({"남해울", "010-8711-2488"});
+    erase({"율율율", "010-8411-2488"});
+    search({"유유융", "010-8411-2485"});
 
     print();
 
     return 0;
 }
+
+/* 한 사람에게 하나의 번호만 배정된다고 가정한다.*/
