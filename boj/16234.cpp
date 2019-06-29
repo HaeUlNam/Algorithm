@@ -1,135 +1,136 @@
 #include<iostream>
-#include<queue>
-#include<stack>
-#include<cstdlib>
 #include<vector>
+#include<queue>
+#include<cstdlib>
+#include<algorithm>
+#include<climits>
+#include<stack>
 using namespace std;
+#define MAX_ROW 55       
+#define MAX_COL 55       
+
+//동, 남, 서, 북
+int dy[] = {0,1,0,-1};
+int dx[] = {1,0,-1,0};
 
 struct info{
-    int x, y;
+    int y, x;
 };
 
-int dr[] = {0, 0, 1, -1};
-int dc[] = {1,-1, 0,  0};
-
 int N, L, R;
-int map[53][53];
-int visit[53][53]; 
 
-queue<info> q;
-vector< stack < info > > vec;
-vector< int > avg;
+int map[MAX_ROW][MAX_COL];
+int cpy_map[MAX_ROW][MAX_COL];
+int visit[MAX_ROW][MAX_COL];
 
-int moveCount;
+bool check = true;
 
-void print()
+void bfs(info start)
 {
-    for(int i = 1; i <= N; i++)
-    {
-        for(int j = 1; j <= N; j++)
-        {
-            cout << map[i][j] << ' ';
-        }
-        cout << endl;
-    }
-    cout << endl;
-}
+    vector<info> move;
+    move.push_back(start);
 
-void bfs(int x, int y, int visit[][51])
-{
-    stack<info> local;
-    int sum = 0;
+    queue<info> q;
+    q.push(start);
+    visit[start.y][start.x] = 1;
 
-    visit[x][y] = 1;
-    q.push({x,y});
-    local.push({x,y}); 
-    sum += map[x][y];
-
+    //연합 찾기
     while(!q.empty())
-    {   
-        info aa = q.front();
+    {
+        info a = q.front();
         q.pop();
-        
+
         for(int i = 0; i < 4; i++)
         {
-            int nr = aa.x + dr[i];
-            int nc = aa.y + dc[i];
+            int nr = dy[i] + a.y;
+            int nc = dx[i] + a.x;
 
+            int diff = abs(map[nr][nc] - map[a.y][a.x]);
+
+            //Exception Handling
             if(!(0 < nr && nr <= N && 0 < nc && nc <= N)) continue;
             if(visit[nr][nc]) continue;
-            int diff = abs(map[aa.x][aa.y] - map[nr][nc]);
-            if(!(L <= diff && diff <= R)) continue;
-
+            if(!(L <= diff && diff <= R)) continue; 
+            
             visit[nr][nc] = 1;
-            q.push({nr,nc});
-            local.push({nr,nc});
-            sum += map[nr][nc];
+            info aa; aa.y = nr; aa.x = nc;
+            q.push(aa);
+            move.push_back(aa);
         }
     }
 
-    if(local.size() != 1) 
-    {
-        vec.push_back(local);
-        int count = local.size();
-        avg.push_back(sum / count);
-        //cout << sum / count << endl;
-    }
-}
+    //연합 값
+    int sum = 0;
+    int count = move.size();
+    
+    if(count == 1) return;
 
-void Calculate()
-{
-    // print();
-    for(int i = 0; i < vec.size(); i++)
-    {
-        stack<info> ss = vec[i];
+    check = true;
 
-        while(!ss.empty())
-        {
-            info aa = ss.top();
-            ss.pop();
-            map[aa.x][aa.y] = avg[i];
-        }
-        // print();
+    for(int i = 0; i < count; i++)
+    {
+        info aa = move[i];
+        sum += map[aa.y][aa.x];
     }
-    //cout << "-------------------------------------" << endl;
+    
+    sum /= count;
+
+    for(int i = 0; i < count; i++)
+    {
+        info aa = move[i];
+        cpy_map[aa.y][aa.x] = sum;
+    }
 }
 
 int main()
 {
-    //Input
-    cin >> N >> L  >> R;
-    for(int i = 1; i <= N; i++)
+    ios_base::sync_with_stdio(false);
+
+    cin >> N >> L >> R;
+
+    //input
+    for(int y = 1; y <= N; y++)
     {
-        for(int j = 1; j <=N; j++)
+        for(int x = 1; x <= N; x++)
         {
-            cin >> map[i][j];
+            cin >> map[y][x];
+            cpy_map[y][x] = map[y][x];
         }
     }
 
-    while(1)
+    int count = -1;
+    while(check)
     {
-        int visit[51][51] = {0, };
+        check = false;
 
-        for(int i = 1; i <= N; i++)
+        for(int y = 1; y <= N; y++)
         {
-            for(int j = 1; j<= N; j++)
-            {  
-                if(visit[i][j]) continue;
-                bfs(i, j, visit);
+            for(int x = 1; x <= N; x++)
+            {
+                if(visit[y][x]) continue;
+
+                info start;
+                start.y = y; start.x = x;
+                bfs(start);
             }
         }
-        
-        if(vec.empty()) break;
-        
-        Calculate();
-        moveCount++;
 
-        //init
-        vec.clear();
-        avg.clear();
+        // cout << "\n";
+        //복사
+        for(int y = 1; y <= N; y++)
+        {
+            for(int x = 1; x <= N; x++)
+            {
+                map[y][x] = cpy_map[y][x];
+                visit[y][x] = 0;
+                // cout << map[y][x] << " ";
+            }
+            // cout << "\n";
+        }
+        count++;
     }
-
-    cout << moveCount << endl;
+    
+    cout << count << endl;
 
     return 0;
 }
